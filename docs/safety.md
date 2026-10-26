@@ -34,3 +34,14 @@ Website interfaces are not stable APIs. UI selectors, authentication flows, dial
 ## Responsibility
 
 Utilities are offered as-is for authorized, informed use. The repository does not guarantee outcomes, compatibility, undo support, or the absence of data loss. Verify important changes through the site's normal interface.
+
+## Bulk-deletion scripts
+
+The Instagram, Gemini, ChatGPT, and image-listing utilities perform destructive actions if configured for live operation. Their defaults differ: Instagram begins its deletion workflow after a browser confirmation, while the three newer utilities **default to a preview-only dry run**. Read each utility's specific README and confirm its configuration before running.
+
+- Do not assume a script can see every item in your account: sidebars, grids, and listing interfaces often load items only when scrolled.
+- Preview matching records, export important data, and start with a one-item deletion limit when one is available.
+- Never treat the disappearance of a DOM element as definitive proof of server-side data erasure.
+- Stop if selectors match multiple controls, expected dialogs differ, or the application shows warnings, rate limits, or errors.
+- Use a website's supported bulk-delete controls where available; for example, ChatGPT provides **Settings → Data controls → Delete all chats**.
+- Browser-console scripts can break after site updates. The repository's automated checks verify JavaScript **syntax**, not live website behavior.

@@ -20,8 +20,10 @@ Start from [`templates/iife.template.js`](templates/iife.template.js) when usefu
 - Do not submit minified or intentionally obfuscated scripts.
 - Do not silently exfiltrate data or run hidden third-party code.
 - Validate page and account context before changing anything.
+- For destructive operations, **prefer a preview-only dry run by default**, require an explicit confirmation for live actions, and provide a configurable small test limit where practical.
 - Show warnings and obtain explicit confirmation for destructive operations.
 - Include adequate status logging, controlled failure handling, and a stop mechanism where useful.
+- Do not alter or remove DOM nodes merely to skip errors; stop or record skips without mutating unrelated UI.
 - Never claim live test coverage without actual evidence.
 
 ## Commit style
