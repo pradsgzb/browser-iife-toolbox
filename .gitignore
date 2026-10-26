@@ -1,0 +1,20 @@
+# Operating system / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# JavaScript / Node temporary files
+node_modules/
+.npm/
+coverage/
+*.log
+
+# Local secrets and scratch files
+.env
+.env.*
+!.env.example
+*.local.js
+*.scratch.js
